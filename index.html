@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <script>
+      function countP() {
+        var a = document.getElementById("myDIV").getElementsByTagName("P")
+          .length;
+        document.getElementById("numberP").innerHTML = a;
+
+        var x = document.getElementById("outputP");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function countA() {
+        var y = document.getElementById("A").childElementCount;
+        document.getElementById("numberA").innerHTML = y;
+
+        var x = document.getElementById("outputA");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+
+      function countB() {
+        var z = document.getElementById("B").childElementCount;
+        document.getElementById("numberB").innerHTML = z;
+
+        var x = document.getElementById("outputB");
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+
+    <button onclick="countP()">count p</button>
+    <button onclick="countA()">count A</button>
+    <button onclick="countB()">count B</button>
+    <div id="myDIV">
+      <div id="A">
+        <p>A</p>
+      </div>
+
+      <div id="B">
+        <p>B</p>
+        <p>B</p>
+        <p>B</p>
+        <p>B</p>
+        <p>B</p>
+        <p>B</p>
+        <p>B</p>
+        <p>B</p>
+        <p>B</p>
+      </div>
+    </div>
+
+    <div id="outputP" style="display:none">
+      <p>There are <span id="numberP"></span> paragraphs on this page</p>
+    </div>
+    <div id="outputA" style="display:none">
+      <p>There are <span id="numberA"></span> "A"s on this page</p>
+    </div>
+    <div id="outputB" style="display:none">
+      <p>There are <span id="numberB"></span> "B"s on this page</p>
+    </div>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html>
